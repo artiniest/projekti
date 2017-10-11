@@ -10,9 +10,14 @@ public class MoveBG : MonoBehaviour
 	void Update () 
 	{
 		transform.Translate(new Vector2 (0, moveSpeed * -Time.deltaTime));
-		if (this.transform.position.y < -15) 
+		if (this.tag == "Background" && this.transform.position.y < -15) 
 		{
-			this.transform.position = returnPos;
+			transform.position = returnPos;
+		}
+
+		if (this.tag == "Platform" && this.transform.position.y < -15) 
+		{
+			Destroy (this.gameObject);
 		}
 	}
 }
