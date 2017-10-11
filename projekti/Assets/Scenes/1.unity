@@ -548,11 +548,6 @@ Prefab:
       propertyPath: m_Name
       value: Cube (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114345968285893408, guid: bb5e93accb5c74c1aa907db891c2a189,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb5e93accb5c74c1aa907db891c2a189, type: 2}
   m_IsPrefabParent: 0
@@ -725,6 +720,11 @@ Prefab:
     - target: {fileID: 4755202741854042, guid: 3bc0c181680b04dfa9ecb4c754795bda, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54175176774847454, guid: 3bc0c181680b04dfa9ecb4c754795bda,
+        type: 2}
+      propertyPath: m_Mass
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bc0c181680b04dfa9ecb4c754795bda, type: 2}
