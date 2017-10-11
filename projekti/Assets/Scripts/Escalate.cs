@@ -5,11 +5,11 @@ using UnityEngine;
 public class Escalate : MonoBehaviour 
 {
 	static public float movementSpeed = 1.5f;
-	float score = 0;
+	public static float score = 0;
 
 	void Start () 
 	{
-		InvokeRepeating("Increase", 5, 5);
+		InvokeRepeating("IncreaseSpeed", 5, 5);
 	}
 
 	void IncreaseSpeed ()

@@ -20,7 +20,7 @@ public class MoveBG : MonoBehaviour
 			transform.position = returnPos;
 		}
 
-		if (this.tag == "Platform" && this.transform.position.y < -15) 
+		if (this.tag != "Background" && this.transform.position.y < -15) 
 		{
 			Destroy (this.gameObject);
 		}

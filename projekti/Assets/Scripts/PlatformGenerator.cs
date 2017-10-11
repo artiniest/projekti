@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlatformGenerator : MonoBehaviour 
 {
 	public GameObject platform;
+	public GameObject platformCoin;
 
 	void Start () 
 	{

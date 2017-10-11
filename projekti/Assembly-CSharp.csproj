@@ -46,6 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Collect.cs" />
+     <Compile Include="Assets\Scripts\CollectibleGenerator.cs" />
      <Compile Include="Assets\Scripts\Escalate.cs" />
      <Compile Include="Assets\Scripts\MoveBG.cs" />
      <Compile Include="Assets\Scripts\PlatformGenerator.cs" />
