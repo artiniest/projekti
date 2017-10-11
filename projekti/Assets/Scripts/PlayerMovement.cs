@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (other.tag == "Platform") 
 		{
+			transform.SetParent (other.gameObject.transform);
 			isGrounded = true;
 		}
 	}
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (other.tag == "Platform") 
 		{
+			transform.SetParent (null);
 			isGrounded = false;
 		}
 	}
