@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class MoveBG : MonoBehaviour 
 {
-	float moveSpeed = 1.5f;
+	public float moveSpeed;
 	Vector2 returnPos = new Vector2 (0, 25);
+
+	void Update ()
+	{
+		moveSpeed = Escalate.movementSpeed;
+	}
 
 	void FixedUpdate () 
 	{
