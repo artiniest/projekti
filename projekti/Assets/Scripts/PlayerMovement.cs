@@ -7,21 +7,40 @@ public class PlayerMovement : MonoBehaviour
 	public float moveSpeed = 10f;
 	public int jumpHeight = 50;
 
+	SpriteRenderer renderer;
 	bool isGrounded;
+
+	void Awake()
+	{
+		renderer = GetComponent<SpriteRenderer> ();
+	}
+
+	void Update () 
+	{
+		if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+			{
+				renderer.flipX = false;
+			}
+
+			if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+			{
+				renderer.flipX = true;
+			}
+	}
 
 	void FixedUpdate () 
 	{
 		float movement = Input.GetAxis ("Horizontal")*Time.deltaTime*moveSpeed;
 		transform.Translate (movement, 0, 0);
 
-		Rigidbody rb = GetComponent<Rigidbody> ();
+		Rigidbody2D rb = GetComponent<Rigidbody2D> ();
 		if (Input.GetKey (KeyCode.Space) && isGrounded == true) 
 		{
-			rb.AddForce (new Vector3 (0, jumpHeight, 0), ForceMode.Impulse);
+			rb.AddForce (new Vector3 (0, jumpHeight, 0), ForceMode2D.Impulse);
 		}
 	}
 
-	void OnTriggerEnter (Collider other)
+	void OnTriggerEnter2D (Collider2D other)
 	{
 		if (other.tag == "Platform") 
 		{
@@ -30,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 		}
 	}
 
-	void OnTriggerExit (Collider other)
+	void OnTriggerExit2D (Collider2D other)
 	{
 		if (other.tag == "Platform") 
 		{
