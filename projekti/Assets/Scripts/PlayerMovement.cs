@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
 
 	void Update () 
 	{
-
 		if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
 			{
 				renderer.flipX = false;
@@ -33,13 +32,16 @@ public class PlayerMovement : MonoBehaviour
 
 	void FixedUpdate () 
 	{
-		float movement = Input.GetAxis ("Horizontal")*Time.deltaTime*moveSpeed;
-		transform.Translate (movement, 0, 0);
+		float movement = Input.GetAxis ("Horizontal") * Time.deltaTime * moveSpeed;
 
-		Rigidbody2D rb = GetComponent<Rigidbody2D> ();
+		Rigidbody2D rigb = GetComponent<Rigidbody2D> ();
+		rigb.transform.Translate (new Vector2 (movement, 0));
+		/*Vector2 newPos = new Vector2 (transform.position.x + movement, transform.position.y);
+		rigb.MovePosition (newPos);*/
+
 		if (Input.GetKey (KeyCode.Space) && isGrounded == true) 
 		{
-			rb.AddForce (new Vector3 (0, jumpHeight, 0), ForceMode2D.Impulse);
+			rigb.AddForce (new Vector3 (0, jumpHeight, 0), ForceMode2D.Impulse);
 		}
 	}
 

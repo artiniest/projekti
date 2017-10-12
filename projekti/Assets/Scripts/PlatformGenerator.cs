@@ -19,7 +19,7 @@ public class PlatformGenerator : MonoBehaviour
 		toInstantiate2 = Random.Range (0, 6);
 
 
-		Instantiate (platforms[toInstantiate], new Vector2 (Random.Range (5.7f, 0), 5.6f), Quaternion.identity);
-		Instantiate (platforms [toInstantiate2], new Vector2 (Random.Range (0, -5.7f), 5.6f), Quaternion.identity);
+		Instantiate (platforms[toInstantiate], new Vector2 (Random.Range (5.7f, 1), 5.6f), Quaternion.identity);
+		Instantiate (platforms [toInstantiate2], new Vector2 (Random.Range (-1, -5.7f), 5.6f), Quaternion.identity);
 	}
 }
