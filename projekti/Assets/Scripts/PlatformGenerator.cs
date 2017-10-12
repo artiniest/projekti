@@ -10,7 +10,7 @@ public class PlatformGenerator : MonoBehaviour
 
 	void Start () 
 	{
-		InvokeRepeating ("Spawn", 0, 1.5f);
+		InvokeRepeating ("Spawn", 0, 1.8f);
 	}
 
 	void Spawn ()
