@@ -13,7 +13,6 @@ public class ScoreTracker : MonoBehaviour
 
 	void Update () 
 	{
-		print (score);
 		score = Escalate.score;
 	}
 }
