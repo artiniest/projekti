@@ -8,26 +8,33 @@ public class PlayerMovement : MonoBehaviour
 	public int jumpHeight = 50;
 
 	SpriteRenderer renderer;
-	Animation animaattori;
+	Animator animaattori;
 	bool isGrounded;
 
 	void Awake()
 	{
 		renderer = GetComponent<SpriteRenderer> ();
-		animaattori = GetComponent<Animation> ();
+		animaattori = GetComponent<Animator> ();
 	}
 
 	void Update () 
 	{
 		if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-			{
-				renderer.flipX = false;
-			}
+		{
+			animaattori.SetBool ("IsMoving", true);
+			renderer.flipX = false;
+		}
 
-			if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-			{
-				renderer.flipX = true;
-			}
+		if (Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown (KeyCode.LeftArrow)) 
+		{
+			animaattori.SetBool ("IsMoving", true);
+			renderer.flipX = true;
+		} 
+
+		if (Input.GetKeyUp (KeyCode.A) || Input.GetKeyUp (KeyCode.RightArrow) || Input.GetKeyDown (KeyCode.D) || Input.GetKeyDown (KeyCode.RightArrow)) 
+		{
+			animaattori.SetBool ("IsMoving", false);
+		}
 	}
 
 	void FixedUpdate () 
@@ -51,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			transform.SetParent (other.gameObject.transform);
 			isGrounded = true;
+			animaattori.SetBool ("IsGrounded", true);
 		}
 	}
 
@@ -60,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			transform.SetParent (null);
 			isGrounded = false;
+			animaattori.SetBool ("IsGrounded", false);
 		}
 	}
 }
