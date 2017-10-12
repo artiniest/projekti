@@ -8,15 +8,18 @@ public class PlayerMovement : MonoBehaviour
 	public int jumpHeight = 50;
 
 	SpriteRenderer renderer;
+	Animation animaattori;
 	bool isGrounded;
 
 	void Awake()
 	{
 		renderer = GetComponent<SpriteRenderer> ();
+		animaattori = GetComponent<Animation> ();
 	}
 
 	void Update () 
 	{
+
 		if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
 			{
 				renderer.flipX = false;
