@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveBG : MonoBehaviour 
 {
 	public float moveSpeed;
-	Vector2 returnPos = new Vector2 (0, 25);
+	Vector3 returnPos = new Vector3 (0, 25, 3);
 
 	void Update ()
 	{
