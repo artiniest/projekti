@@ -283,9 +283,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd02e2da0be54ea6ae60bdaee1814fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platform: {fileID: 1557791823602360, guid: bb5e93accb5c74c1aa907db891c2a189, type: 2}
-  platformCoin: {fileID: 1702073167481396, guid: 28c4623b64a5a47ea89b1fdc7ca6eebb,
-    type: 2}
+  platforms:
+  - {fileID: 1557791823602360, guid: bb5e93accb5c74c1aa907db891c2a189, type: 2}
+  - {fileID: 1702073167481396, guid: a7d135b8fc31e4744962ef4a57cdd2f4, type: 2}
+  - {fileID: 1557791823602360, guid: bb5e93accb5c74c1aa907db891c2a189, type: 2}
+  - {fileID: 1557791823602360, guid: bb5e93accb5c74c1aa907db891c2a189, type: 2}
+  - {fileID: 1557791823602360, guid: bb5e93accb5c74c1aa907db891c2a189, type: 2}
+  - {fileID: 1557791823602360, guid: bb5e93accb5c74c1aa907db891c2a189, type: 2}
+  - {fileID: 1557791823602360, guid: bb5e93accb5c74c1aa907db891c2a189, type: 2}
+  - {fileID: 1557791823602360, guid: bb5e93accb5c74c1aa907db891c2a189, type: 2}
+  - {fileID: 1557791823602360, guid: bb5e93accb5c74c1aa907db891c2a189, type: 2}
 --- !u!1 &340794610
 GameObject:
   m_ObjectHideFlags: 0
