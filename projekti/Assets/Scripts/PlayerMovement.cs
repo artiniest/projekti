@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void Awake()
 	{
+		OnTouchDIE.diediedie = false;
 		renderer = GetComponent<SpriteRenderer> ();
 		animaattori = GetComponent<Animator> ();
 	}
@@ -35,20 +36,30 @@ public class PlayerMovement : MonoBehaviour
 		{
 			animaattori.SetBool ("IsMoving", false);
 		}
+
+		if (OnTouchDIE.diediedie == true) 
+		{
+			animaattori.SetBool ("hasDied", true);
+		}
+
+		print (OnTouchDIE.diediedie);
 	}
 
 	void FixedUpdate () 
 	{
-		float movement = Input.GetAxis ("Horizontal") * Time.deltaTime * moveSpeed;
-
-		Rigidbody2D rigb = GetComponent<Rigidbody2D> ();
-		rigb.transform.Translate (new Vector2 (movement, 0));
-		/*Vector2 newPos = new Vector2 (transform.position.x + movement, transform.position.y);
-		rigb.MovePosition (newPos);*/
-
-		if (Input.GetKey (KeyCode.Space) && isGrounded == true) 
+		if (OnTouchDIE.diediedie == false) 
 		{
-			rigb.AddForce (new Vector3 (0, jumpHeight, 0), ForceMode2D.Impulse);
+			float movement = Input.GetAxis ("Horizontal") * Time.deltaTime * moveSpeed;
+
+			Rigidbody2D rigb = GetComponent<Rigidbody2D> ();
+			rigb.transform.Translate (new Vector2 (movement, 0));
+			/*Vector2 newPos = new Vector2 (transform.position.x + movement, transform.position.y);
+			rigb.MovePosition (newPos);*/
+
+			if (Input.GetKey (KeyCode.Space) && isGrounded == true) 
+			{
+				rigb.AddForce (new Vector3 (0, jumpHeight, 0), ForceMode2D.Impulse);
+			}
 		}
 	}
 
@@ -64,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void OnTriggerExit2D (Collider2D other)
 	{
-		if (other.tag == "Platform") 
+		if (other.tag == "Platform" && OnTouchDIE.diediedie == false) 
 		{
 			transform.SetParent (null);
 			isGrounded = false;
