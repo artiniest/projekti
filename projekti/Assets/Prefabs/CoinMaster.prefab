@@ -20,9 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4491475722208642}
   - component: {fileID: 33409963399071358}
-  - component: {fileID: 136340982454650960}
   - component: {fileID: 23703084396917616}
-  - component: {fileID: 114013370096561352}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -38,7 +36,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4522216431363818}
-  - component: {fileID: 114933109948233634}
+  - component: {fileID: 61439993128610904}
+  - component: {fileID: 114964194142480652}
   m_Layer: 0
   m_Name: CoinMaster
   m_TagString: Untagged
@@ -65,8 +64,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1459425935906974}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.620243, y: -0.31543836, z: -0.231}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.088490725, y: 0.9070338, z: 0.48399997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4491475722208642}
@@ -112,18 +111,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1034053879356804}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114013370096561352
-MonoBehaviour:
+--- !u!61 &61439993128610904
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1034053879356804}
+  m_GameObject: {fileID: 1459425935906974}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a06d9967959d846e583485181638e3b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114933109948233634
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.083177805, y: -0.11977595}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54085875, y: 0.57412946}
+  m_EdgeRadius: 0
+--- !u!114 &114964194142480652
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -131,20 +144,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1459425935906974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64bce6ea89fcb4671a5266b1397d554c, type: 3}
+  m_Script: {fileID: 11500000, guid: a06d9967959d846e583485181638e3b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.5
---- !u!136 &136340982454650960
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1034053879356804}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}

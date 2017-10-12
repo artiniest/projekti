@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Collect : MonoBehaviour 
 {
-	void OnTriggerEnter (Collider other)
+	void OnTriggerEnter2D (Collider2D other)
 	{
 		Escalate.score += 1;
 		Destroy (this.gameObject);
