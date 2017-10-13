@@ -10,7 +10,8 @@ public class PlatformGenerator : MonoBehaviour
 
 	void Start () 
 	{
-		InvokeRepeating ("Spawn", 0, 1.9f);
+		InvokeRepeating ("Spawn", 1f, 1.9f);
+		//Invoke ("Spawn", 1f);
 	}
 
 	void Spawn ()
@@ -19,7 +20,7 @@ public class PlatformGenerator : MonoBehaviour
 		toInstantiate2 = Random.Range (0, 6);
 
 
-		Instantiate (platforms[toInstantiate], new Vector2 (Random.Range (5.7f, 1), 5.6f), Quaternion.identity);
-		Instantiate (platforms [toInstantiate2], new Vector2 (Random.Range (-1, -5.7f), 5.6f), Quaternion.identity);
+		Instantiate (platforms[toInstantiate], new Vector2 (Random.Range (4f, 1), 13), Quaternion.identity);
+		Instantiate (platforms [toInstantiate2], new Vector2 (Random.Range (-1, -4f), 13), Quaternion.identity);
 	}
 }

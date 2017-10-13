@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
 	public float moveSpeed = 10f;
 	public int jumpHeight = 50;
+	public static float position;
+
 
 	SpriteRenderer renderer;
 	Animator animaattori;
@@ -20,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void Update () 
 	{
+		position = transform.position.y;
 		if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
 		{
 			animaattori.SetBool ("IsMoving", true);
@@ -41,8 +44,6 @@ public class PlayerMovement : MonoBehaviour
 		{
 			animaattori.SetBool ("hasDied", true);
 		}
-
-		print (OnTouchDIE.diediedie);
 	}
 
 	void FixedUpdate () 

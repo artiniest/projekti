@@ -12,7 +12,7 @@ public class Escalate : MonoBehaviour
 	void Start () 
 	{
 		score = 0;
-		//InvokeRepeating("IncreaseSpeed", 5, 5);
+		InvokeRepeating("IncreaseSpeed", 5, 5);
 	}
 
 	void IncreaseSpeed ()
