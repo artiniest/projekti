@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class PassThrough : MonoBehaviour 
 {
-	Vector2 playerPos;
 	public BoxCollider2D[] kollisio;
 	public bool isOver;
 
 	void Start () 
 	{
 		isOver = false;
-		playerPos = GameObject.FindGameObjectWithTag ("Player").transform.position;
 		kollisio = GetComponents<BoxCollider2D> ();
 	}
 
