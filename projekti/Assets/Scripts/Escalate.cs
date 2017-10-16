@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class Escalate : MonoBehaviour 
 {
-	static public float movementSpeed = 1.5f;
+	static public float movementSpeed = 3f;
 	public static float score = 0;
 	public Text teksti;
 
 	void Start () 
 	{
 		score = 0;
-		InvokeRepeating("IncreaseSpeed", 5, 5);
+		//InvokeRepeating("IncreaseSpeed", 5, 5);
 	}
 
 	void IncreaseSpeed ()
