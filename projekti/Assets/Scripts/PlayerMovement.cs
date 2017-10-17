@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour 
 {
+	public int levelToLoad = 1;
+	bool hasDied = false;
+
 	public float moveSpeed = 10f;
 	public int jumpHeight = 50;
 	public static float position;
+	private Rigidbody2D rigb;
 
 
 	SpriteRenderer renderer;
@@ -15,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void Awake()
 	{
-		OnTouchDIE.diediedie = false;
+		rigb = GetComponent<Rigidbody2D> ();
 		renderer = GetComponent<SpriteRenderer> ();
 		animaattori = GetComponent<Animator> ();
 	}
@@ -40,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 			animaattori.SetBool ("IsMoving", false);
 		}
 
-		if (OnTouchDIE.diediedie == true) 
+		if (hasDied == true) 
 		{
 			animaattori.SetBool ("hasDied", true);
 		}
@@ -48,12 +52,10 @@ public class PlayerMovement : MonoBehaviour
 
 	void FixedUpdate () 
 	{
-		if (OnTouchDIE.diediedie == false) 
+		if (hasDied == false) 
 		{
 			float movement = Input.GetAxis ("Horizontal") * Time.deltaTime * moveSpeed;
-
-			Rigidbody2D rigb = GetComponent<Rigidbody2D> ();
-			rigb.transform.Translate (new Vector2 (movement, 0));
+			//rigb.transform.Translate (new Vector2 (movement, 0));
 
 
 			if (Input.GetKey (KeyCode.Space) && isGrounded == true) 
@@ -65,6 +67,12 @@ public class PlayerMovement : MonoBehaviour
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
+		if (other.tag == "Goo") 
+		{
+			hasDied = true;
+			Invoke ("GoDie", 2.5f);
+		}
+
 		if (other.tag == "Platform") 
 		{
 			transform.SetParent (other.gameObject.transform);
@@ -75,11 +83,16 @@ public class PlayerMovement : MonoBehaviour
 
 	void OnTriggerExit2D (Collider2D other)
 	{
-		if (other.tag == "Platform" && OnTouchDIE.diediedie == false) 
+		if (other.tag == "Platform" && hasDied == false) 
 		{
 			transform.SetParent (null);
 			isGrounded = false;
 			animaattori.SetBool ("IsGrounded", false);
 		}
+	}
+		
+	void GoDie ()
+	{
+		Application.LoadLevel (levelToLoad);
 	}
 }

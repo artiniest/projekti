@@ -2016,7 +2016,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1530054195}
   - component: {fileID: 1530054196}
-  - component: {fileID: 1530054197}
   - component: {fileID: 1530054198}
   m_Layer: 0
   m_Name: GooCollider
@@ -2063,17 +2062,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.419445, y: 4.34929}
   m_EdgeRadius: 0
---- !u!114 &1530054197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1530054194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ae1e9e21cf5e482dab380314e1bbaeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1530054198
 BoxCollider2D:
   m_ObjectHideFlags: 0
