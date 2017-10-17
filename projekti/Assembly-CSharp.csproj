@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\OnTouchDIE.cs" />
      <Compile Include="Assets\Scripts\PassThrough.cs" />
      <Compile Include="Assets\Scripts\PlatformGenerator.cs" />
+     <Compile Include="Assets\Scripts\PlaySound.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement2.cs" />
      <Compile Include="Assets\Scripts\Reload.cs" />
