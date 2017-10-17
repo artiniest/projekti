@@ -54,8 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
 			Rigidbody2D rigb = GetComponent<Rigidbody2D> ();
 			rigb.transform.Translate (new Vector2 (movement, 0));
-			/*Vector2 newPos = new Vector2 (transform.position.x + movement, transform.position.y);
-			rigb.MovePosition (newPos);*/
+
 
 			if (Input.GetKey (KeyCode.Space) && isGrounded == true) 
 			{
