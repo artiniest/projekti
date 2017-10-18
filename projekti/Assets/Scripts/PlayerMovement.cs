@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour 
 {
 	public int levelToLoad = 1;
-	bool hasDied = false;
+	bool hasControl = true;
 
 	public float moveSpeed = 10f;
 	public int jumpHeight = 50;
@@ -44,13 +44,13 @@ public class PlayerMovement : MonoBehaviour
 			animaattori.SetBool ("IsMoving", false);
 		}
 
-		if (hasDied == true) 
+		if (hasControl == false) 
 		{
 			animaattori.SetBool ("hasDied", true);
 		}
 
 
-		if (Input.GetKeyDown (KeyCode.Space) && isGrounded == true) 
+		if (Input.GetKeyDown (KeyCode.Space) && isGrounded == true && hasControl == true) 
 		{
 			rigb.AddForce (new Vector3 (0, jumpHeight, 0), ForceMode2D.Impulse);
 			isGrounded = false;
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 	void FixedUpdate () 
 	{
 		
-		if (hasDied == false) 
+		if (hasControl == true) 
 		{
 			float movement = Input.GetAxis ("Horizontal") * Time.deltaTime * moveSpeed;
 			rigb.velocity = new Vector2 (movement, rigb.velocity.y);
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (other.tag == "Goo") 
 		{
-			hasDied = true;
+			hasControl = false;
 			Invoke ("GoDie", 2.5f);
 		}
 
@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void OnTriggerExit2D (Collider2D other)
 	{
-		if (other.tag == "Platform" && hasDied == false) 
+		if (other.tag == "Platform" && hasControl == true) 
 		{
 			transform.SetParent (null);
 			animaattori.SetBool ("IsGrounded", false);
