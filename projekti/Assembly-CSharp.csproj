@@ -46,8 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\AnimationController.cs" />
-     <Compile Include="Assets\Scripts\AnimationPlayStop.cs" />
      <Compile Include="Assets\Scripts\Collect.cs" />
      <Compile Include="Assets\Scripts\Escalate.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
