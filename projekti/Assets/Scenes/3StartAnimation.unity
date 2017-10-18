@@ -923,6 +923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 953102129}
   - component: {fileID: 953102128}
+  - component: {fileID: 953102130}
   - component: {fileID: 953102127}
   m_Layer: 0
   m_Name: Sprite_Spotlight (1)
@@ -941,7 +942,6 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 3d1405e7f47314ce4bf52181c3b9b8d6, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: fc48c4b178ac04cdb9b2c8f404c5d889, type: 2}
   - {fileID: 7400000, guid: 3d1405e7f47314ce4bf52181c3b9b8d6, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
@@ -1002,6 +1002,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &953102130
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 953102126}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21e8d6908e6fb40359a67fe98bbc0d0b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1049288841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1370637770}
   - component: {fileID: 1370637769}
+  - component: {fileID: 1370637771}
   m_Layer: 0
   m_Name: Sprite_LightSpot_Green_BIIIG
   m_TagString: Untagged
@@ -1318,6 +1336,23 @@ Transform:
   m_Father: {fileID: 953102129}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1370637771
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1370637768}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d1b83c8d9dd04244a25093d18de6dc7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1637020518
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,18 +1450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf19e0168feb041fa90132461c0ec9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objektit:
-  - {fileID: 803252202}
-  - {fileID: 357534886}
-  - {fileID: 1719561720}
-  - {fileID: 2058283699}
-  - {fileID: 953102126}
-  - {fileID: 1370637768}
-  - {fileID: 1949729153}
-  - {fileID: 1231317250}
-  - {fileID: 98863060}
-  velho: {fileID: 2119851459}
-  player: {fileID: 1049288841}
 --- !u!4 &1683289859
 Transform:
   m_ObjectHideFlags: 0
@@ -1544,7 +1567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1832788433
 Animator:
   serializedVersion: 3
@@ -1610,7 +1633,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1832788432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3453197, y: -0.84406614, z: 0}
+  m_LocalPosition: {x: -2.32, y: -0.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1695,6 +1718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1949729155}
   - component: {fileID: 1949729154}
+  - component: {fileID: 1949729156}
   m_Layer: 0
   m_Name: Sprite_LightSpot_Purple_BIIIG
   m_TagString: Untagged
@@ -1756,6 +1780,23 @@ Transform:
   m_Father: {fileID: 2058283702}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1949729156
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1949729153}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f68397f885f2846bb82b958326badf2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &2058283699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,6 +1807,7 @@ GameObject:
   - component: {fileID: 2058283702}
   - component: {fileID: 2058283701}
   - component: {fileID: 2058283700}
+  - component: {fileID: 2058283703}
   m_Layer: 0
   m_Name: Sprite_Spotlight
   m_TagString: Untagged
@@ -1781,7 +1823,7 @@ Animation:
   m_GameObject: {fileID: 2058283699}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: fc48c4b178ac04cdb9b2c8f404c5d889, type: 2}
+  m_Animation: {fileID: 7400000, guid: 7d5a24b990c6c4ab79b8c616b179461f, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: fc48c4b178ac04cdb9b2c8f404c5d889, type: 2}
   m_WrapMode: 0
@@ -1842,7 +1884,24 @@ Transform:
   - {fileID: 1949729155}
   m_Father: {fileID: 0}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 47.371254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.140234}
+--- !u!95 &2058283703
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2058283699}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f1fae5fe7a3e448ba853d79d8e77f8c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &2119851459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,7 +1918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &2119851460
 Animator:
   serializedVersion: 3
