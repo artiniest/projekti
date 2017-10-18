@@ -5,22 +5,22 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour 
 {
 	public int levelToLoad = 1;
-	public static bool hasControl = true;
+	bool hasControl = true;
+	bool hasDied = false;
 
 	public float moveSpeed = 10f;
 	public int jumpHeight = 50;
 	public static float position;
 	private Rigidbody2D rigb;
 
-
-	SpriteRenderer renderer;
+	SpriteRenderer renderero;
 	Animator animaattori;
 	bool isGrounded;
 
 	void Awake()
 	{
 		rigb = GetComponent<Rigidbody2D> ();
-		renderer = GetComponent<SpriteRenderer> ();
+		renderero = GetComponent<SpriteRenderer> ();
 		animaattori = GetComponent<Animator> ();
 	}
 
@@ -30,13 +30,13 @@ public class PlayerMovement : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
 		{
 			animaattori.SetBool ("IsMoving", true);
-			renderer.flipX = false;
+			renderero.flipX = false;
 		}
 
 		if (Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown (KeyCode.LeftArrow)) 
 		{
 			animaattori.SetBool ("IsMoving", true);
-			renderer.flipX = true;
+			renderero.flipX = true;
 		} 
 
 		if (Input.GetKeyUp (KeyCode.A) || Input.GetKeyUp (KeyCode.RightArrow) || Input.GetKeyDown (KeyCode.D) || Input.GetKeyDown (KeyCode.RightArrow)) 
@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 			animaattori.SetBool ("IsMoving", false);
 		}
 
-		if (hasControl == false) 
+		if (hasDied == true) 
 		{
 			animaattori.SetBool ("hasDied", true);
 		}
@@ -65,6 +65,11 @@ public class PlayerMovement : MonoBehaviour
 			float movement = Input.GetAxis ("Horizontal") * Time.deltaTime * moveSpeed;
 			rigb.velocity = new Vector2 (movement, rigb.velocity.y);
 		}
+
+		if (hasControl == false) 
+		{
+			rigb.velocity = new Vector2 (0, rigb.velocity.y);
+		}
 	}
 
 	void OnTriggerEnter2D (Collider2D other)
@@ -72,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
 		if (other.tag == "Goo") 
 		{
 			hasControl = false;
+			hasDied = true;
 			Invoke ("GoDie", 2.5f);
 		}
 
@@ -79,6 +85,11 @@ public class PlayerMovement : MonoBehaviour
 		{
 			transform.SetParent (other.gameObject.transform);
 			animaattori.SetBool ("IsGrounded", true);
+		}
+			
+		if (other.tag == "Brick") 
+		{
+			Invoke ("DisableMovement", 0);
 		}
 	}
 
@@ -97,6 +108,17 @@ public class PlayerMovement : MonoBehaviour
 			transform.SetParent (null);
 			animaattori.SetBool ("IsGrounded", false);
 		}
+	}
+
+	void DisableMovement () 
+	{
+		hasControl = false;
+		Invoke ("EnableMovement", 1f);
+	}
+
+	void EnableMovement ()
+	{
+		hasControl = true;
 	}
 		
 	void GoDie ()

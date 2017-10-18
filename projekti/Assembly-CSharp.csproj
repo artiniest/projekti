@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BrickSpawn.cs" />
-     <Compile Include="Assets\Scripts\BrickThings.cs" />
      <Compile Include="Assets\Scripts\Collect.cs" />
      <Compile Include="Assets\Scripts\Escalate.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
