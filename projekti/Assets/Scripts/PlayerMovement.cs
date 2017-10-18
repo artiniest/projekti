@@ -48,6 +48,13 @@ public class PlayerMovement : MonoBehaviour
 		{
 			animaattori.SetBool ("hasDied", true);
 		}
+
+
+		if (Input.GetKeyDown (KeyCode.Space) && isGrounded == true) 
+		{
+			rigb.AddForce (new Vector3 (0, jumpHeight, 0), ForceMode2D.Impulse);
+			isGrounded = false;
+		}
 	}
 
 	void FixedUpdate () 
@@ -57,12 +64,6 @@ public class PlayerMovement : MonoBehaviour
 		{
 			float movement = Input.GetAxis ("Horizontal") * Time.deltaTime * moveSpeed;
 			rigb.velocity = new Vector2 (movement, rigb.velocity.y);
-
-			if (Input.GetKeyDown (KeyCode.Space) && isGrounded == true) 
-			{
-				rigb.AddForce (new Vector3 (0, jumpHeight, 0), ForceMode2D.Impulse);
-				isGrounded = false;
-			}
 		}
 	}
 
