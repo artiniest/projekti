@@ -52,15 +52,16 @@ public class PlayerMovement : MonoBehaviour
 
 	void FixedUpdate () 
 	{
+		
 		if (hasDied == false) 
 		{
 			float movement = Input.GetAxis ("Horizontal") * Time.deltaTime * moveSpeed;
-			//rigb.transform.Translate (new Vector2 (movement, 0));
-
+			rigb.velocity = new Vector2 (movement, rigb.velocity.y);
 
 			if (Input.GetKey (KeyCode.Space) && isGrounded == true) 
 			{
 				rigb.AddForce (new Vector3 (0, jumpHeight, 0), ForceMode2D.Impulse);
+				isGrounded = false;
 			}
 		}
 	}
@@ -76,8 +77,15 @@ public class PlayerMovement : MonoBehaviour
 		if (other.tag == "Platform") 
 		{
 			transform.SetParent (other.gameObject.transform);
-			isGrounded = true;
 			animaattori.SetBool ("IsGrounded", true);
+		}
+	}
+
+	void OnTriggerStay2D (Collider2D other)
+	{
+		if (other.tag == "Platform") 
+		{
+			isGrounded = true;
 		}
 	}
 
@@ -86,7 +94,6 @@ public class PlayerMovement : MonoBehaviour
 		if (other.tag == "Platform" && hasDied == false) 
 		{
 			transform.SetParent (null);
-			isGrounded = false;
 			animaattori.SetBool ("IsGrounded", false);
 		}
 	}

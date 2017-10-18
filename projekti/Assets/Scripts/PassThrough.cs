@@ -11,10 +11,12 @@ public class PassThrough : MonoBehaviour
 	{
 		isOver = false;
 		kollisio = GetComponents<BoxCollider2D> ();
+		kollisio [1].enabled = false;
 	}
 
 	void Update ()
 	{
+
 		if (PlayerMovement.position < this.gameObject.transform.position.y) 
 		{
 			kollisio [0].enabled = false;
@@ -22,7 +24,7 @@ public class PassThrough : MonoBehaviour
 			isOver = false;
 		}
 
-		if (PlayerMovement.position > this.gameObject.transform.position.y)
+		if (PlayerMovement.position - 1f > this.gameObject.transform.position.y)
 		{
 			kollisio [0].enabled = true;
 			kollisio [1].enabled = true;
