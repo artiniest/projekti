@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour 
 {
 	public int levelToLoad = 1;
-	bool hasControl = true;
+	public static bool hasControl = true;
 
 	public float moveSpeed = 10f;
 	public int jumpHeight = 50;
