@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 	public float moveSpeed = 10f;
 	public int jumpHeight = 50;
 	public static float position;
+	public GameObject concussion;
 	private Rigidbody2D rigb;
 
 	SpriteRenderer renderero;
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void Awake()
 	{
+		concussion.SetActive (false);
 		rigb = GetComponent<Rigidbody2D> ();
 		renderero = GetComponent<SpriteRenderer> ();
 		animaattori = GetComponent<Animator> ();
@@ -112,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void DisableMovement () 
 	{
+		concussion.SetActive (true);
 		hasControl = false;
 		Invoke ("EnableMovement", 1f);
 	}
@@ -119,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
 	void EnableMovement ()
 	{
 		hasControl = true;
+		concussion.SetActive (false);
 	}
 		
 	void GoDie ()
