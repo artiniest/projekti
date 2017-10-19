@@ -1,15 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Editor/HiddenObjectExplorer.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlaySound.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlatformGenerator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MoveBG.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Escalate.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ScoreTracker.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="86" Column="41" />
-      <File FileName="Assets/Scripts/PassThrough.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Collect.cs" Line="11" Column="3" />
+      <File FileName="Assets/Editor/HiddenObjectExplorer.cs" Line="87" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
