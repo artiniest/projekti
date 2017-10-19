@@ -484,14 +484,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 306127105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ae3d11ba16754a3786e17fc497b4983, type: 3}
+  m_Script: {fileID: 11500000, guid: c8ca8f65253d74bb6a038eeaab6d9c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawns:
   - {fileID: 1612348728}
   - {fileID: 2134420466}
   - {fileID: 1929905057}
-  brick: {fileID: 1331783477088026, guid: 030b4e61774c842fbb1f2e3584f55ce6, type: 2}
+  brick: {fileID: 1331783477088026, guid: 047de311e29fb4c8cb83ab810b7d78f4, type: 2}
 --- !u!1 &332939162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2372,18 +2372,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 212513628137558108, guid: 3bc0c181680b04dfa9ecb4c754795bda,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b8857244cac47482eb70462d0654133c,
-        type: 3}
-    - target: {fileID: 114453672436110480, guid: 3bc0c181680b04dfa9ecb4c754795bda,
-        type: 2}
-      propertyPath: Deadsprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b8857244cac47482eb70462d0654133c,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bc0c181680b04dfa9ecb4c754795bda, type: 2}
   m_IsPrefabParent: 0
