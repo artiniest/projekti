@@ -9,8 +9,12 @@ public class LoadGame : MonoBehaviour
 
 	void Update ()
 	{
-		print (timeElapsed);
 		timeElapsed++;
+
+		if (timeElapsed > 1070) 
+		{
+			Application.LoadLevel (LevelToLoad);
+		}
 	}
 
 }
