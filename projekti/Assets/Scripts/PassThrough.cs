@@ -24,7 +24,7 @@ public class PassThrough : MonoBehaviour
 			isOver = false;
 		}
 
-		if (PlayerMovement.position - 1f > this.gameObject.transform.position.y)
+		if (PlayerMovement.position - 0.5f > this.gameObject.transform.position.y)
 		{
 			kollisio [0].enabled = true;
 			kollisio [1].enabled = true;
