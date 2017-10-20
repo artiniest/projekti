@@ -8,7 +8,7 @@ public class PlatformGenerator : MonoBehaviour
 
 	void Start () 
 	{
-		InvokeRepeating ("SpawnBig", 0f, 6.5f);
+		InvokeRepeating ("SpawnBig", 0f, 8.5f);
 	}
 	void SpawnBig ()
 	{
