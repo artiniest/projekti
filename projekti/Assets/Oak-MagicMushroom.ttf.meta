@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 71d3de12d1bb341fd9eeb0b646edfe50
+timeCreated: 1508485667
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Oak-MagicMushroom
+  fontNames:
+  - Oak-MagicMushroom
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
