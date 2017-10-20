@@ -11,20 +11,18 @@ public class Escalate : MonoBehaviour
 
 	void Start () 
 	{
+		Invoke ("Starting", 2);
 		score = 0;
-		//InvokeRepeating("IncreaseSpeed", 5, 5);
-	}
-
-	void IncreaseSpeed ()
-	{
-		movementSpeed += 0.5f;
+		movementSpeed = 0;
 	}
 
 	void Update ()
 	{
 		teksti.text = "Score " + score.ToString("F0");
-		//score += Time.deltaTime;
+	}
 
-		//print (score.ToString("F0"));
+	void Starting ()
+	{
+		movementSpeed = 3f;
 	}
 }
