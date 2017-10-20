@@ -9,7 +9,7 @@ public class BrickSpawn : MonoBehaviour
 
 	void Start () 
 	{
-		InvokeRepeating ("Spawn", 5, 5); 
+		InvokeRepeating ("Spawn", 15, 5); 
 	}
 
 	void Spawn ()
