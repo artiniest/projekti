@@ -15,6 +15,11 @@ public class LoadGame : MonoBehaviour
 		{
 			Application.LoadLevel (LevelToLoad);
 		}
+
+		if (Input.GetKeyDown (KeyCode.Space))
+		{
+			Application.LoadLevel (LevelToLoad);
+		}
 	}
 
 }
