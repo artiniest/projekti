@@ -9,7 +9,7 @@ public class Reload : MonoBehaviour
 	{
 		if (Input.GetKeyDown (KeyCode.U)) 
 		{
-			Application.LoadLevel (2);
+			Application.LoadLevel (1);
 		}
 	}
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour 
 {
-	public int levelToLoad = 1;
+	public int levelToLoad = 2;
 	bool hasControl = true;
 	bool hasDied = false;
 
@@ -127,6 +127,6 @@ public class PlayerMovement : MonoBehaviour
 		
 	void GoDie ()
 	{
-		Application.LoadLevel (levelToLoad);
+		Application.LoadLevel (2);
 	}
 }
